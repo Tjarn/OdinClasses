@@ -29,7 +29,91 @@
         &lt/ul&gt. Within the list, each element is bounded by the tag
         pair &ltli&gt and &lt/li&gt.  I would expect this to mean that
         you can change an ordered list to an unordered list by changing
-        the enclosing tags.
+        the enclosing list tags.
     </p>
+    <p>
+        As an example of an unordered list, let's try to set one up
+        inside this paragraph.  Look at the source of this page to see
+        the list after this text.
+
+        <ul>
+            <li>Hamburger</li>
+            <li>French Fries</li>
+            <li>Milkshake</li>
+            <li>Hot Peppers</li>
+        </ul>
+    </p>
+    <p>
+        The list worked just fine, and each element recieved a bullet
+        prefix as a format. Now let's try the same list outside the bounds
+        of the current paragraph.
+    </p>
+    <ul>
+        <li>Hamburger</li>
+        <li>French Fries</li>
+        <li>Milkshake</li>
+        <li>Hot Peppers</li>
+    </ul>
+    <p>
+        The previous list is before this paragraph and after the last.
+        I don't see any difference whether it's enclosed in 
+        paragraph tags or not.
+    </p>
+    <h2>Ordered Lists</h2>
+    <p>
+    To make an ordered list, enclose the list elements in the 
+    &gtol&lt and &gt/ol&lt tags.
+    </p>
+    <ol>
+        <li>Hamburger</li>
+        <li>French Fries</li>
+        <li>Milkshake</li>
+        <li>Hot Peppers</li>
+    </ol>
+    <p>
+        The obvious difference is the change of the bullet points 
+        to a sequential list of items.  I'm going to mess around 
+        for a while and see what happens when you put lists inside
+        list items.  Being lazy, I'll just use the list items I've
+        already typed in.
+    </p>
+    <h3>An ordered list of unorded lists</h3>
+    <ol>
+        <li>
+            <ul>
+                <li>Hamburger</li>
+                <li>French Fries</li>
+                <li>Milkshake</li>
+                <li>Hot Peppers</li>
+            </ul>
+        </li>
+        <li>
+            <ul>
+                <li>Hamburger</li>
+                <li>French Fries</li>
+                <li>Milkshake</li>
+                <li>Hot Peppers</li>
+            </ul>
+        </li>
+        <li>
+            <ul>
+                <li>Hamburger</li>
+                <li>French Fries</li>
+                <li>Milkshake</li>
+                <li>Hot Peppers</li>
+            </ul>
+        </li>
+
+    </ol>
+    <p>
+        Obviously there's no internal logic about lists that makes
+        an internal difference in an html document.  That substatutive
+        difference is in the real world meaning of the list.  
+    </p>
+    <p>
+        And as for me, I find that i can ramble on like this having
+        a good time as I go.
+    </p>
+
 </body>
 </html>
