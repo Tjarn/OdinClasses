@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>div.foobar{color:white;background-color:darkblue}</style> 
+    <!-- <style>body {background-color: lightgreen;}</style> -->
+</head>
+<body>
+    This is text after &ltbody&gt. It seems to be working fine. 
+
+    It treats multiple white spaces
+    as a single space.  So what about putting it in a div container?
+    <div>OK, this is in a div ending here.</div><div>OK, another</div><div>and another</div>
+    And this is after the last div
+    <div style="background-color:aqua">Now this is in a new div with the background color changed.
+    Use the browser's right mouse button to bring up a menu and something like view page source should
+    let you see where it changes. </div>
+    <div>Now we're back in a plain div.  Does the color stay or revert?  My intuition says it should
+        revert, but no refunds allowed.
+    </div>
+    <p>Now we are ticking along inside a p container until it gets to the end and we pop out</p>
+    <div class="foobar">into another div container.  This one is a bit different though, it has
+        an attribute called class.  In the dev header we've got the class="foobar" property.  When we
+        look at the matching, the pattern div.foobar looks like what I'd call a match
+    </div>
+    <div>Now I'll go up into the head and see if div.foobar matches the last container.
+        I'll use the line 'div.foobar{color:white;background-color:darkblue;}' It matched. Now
+        to see if '.foobar' matches. </div>
+    <p>
+        This is in a p container 
+    </p>
+    
+    <p class="foobar">
+        And this in a p.foobar container.
+    </p>
+    <div>And back to a plain div</div>
+
+</body>
+</html>

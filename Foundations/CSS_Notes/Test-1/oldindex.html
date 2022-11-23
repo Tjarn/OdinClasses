@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Experiments and Notes</title>
+
+<!--
+    ###########################################################################
+    Change css stylesheets by editing the href
+-->
+
+    <link rel="stylesheet" href="test-1.css" />
+ <!--
+    <link rel="stylesheet" href="index.css" />
+ -->   
+</head>
+
+<body>
+<h1>CSS Notes</h1>
+<p class="body-text">
+    I'm using this document to experiment with and to document what I'm learning about CSS.
+    As happens in many cases, I'm expecting the process of writing it down to help me to learn
+    the material better.  So moving it from short-term to long-term memory, and understanding
+    how and why it works is the name of this game.
+</p>
+    <h2>CSS -- What it is</h2>
+    <p class="body-text">
+        In order for me to fully understand something, I usually need to build a mental model of 
+        some sort. That's what I'm doing here.  I hope that by writing things out, I can nail down the
+        concepts hard enough that they stick long enough to use.  I'll be messing around with styling
+        in here, so hope to have some demos that I can mess with.
+    </p>
+    <p class="body-text">    <p class="body-text">
+
+        What is it?  From what I can see from this point in my learning is that it's a method of selecting
+        html entities and adding specifications as to how they render. It looks like it is in the same
+        place as PostScript is with printing in speaking to a web browser.  The computer pumps out encoded
+        binary streams to either, one renders graphical text on a printer, the other renders graphics and 
+        text on a browser screen.  Of course the printed rendition is static and the other is dynamic, so 
+        the parallel is limited.  But for now it looks like a way to add 'HOW' to html's WHAT.
+    </p>
+    <p class="body-text">
+        More specifically it is a number of methods of identifying, marking, and combining discrete html 
+        entities and specifying ways to render them. From there, it looks to get complicated fast.
+    </p>
+    <p class="body-text">
+        Here's a selection from a random CSS file in my Linux system:
+    </p>
+    <code>
+        
+table.navigation 
+{
+  background: #ffeeee;
+  border: solid 1px #ffaaaa;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+.navigation a 
+{
+  color: #770000;
+}
+.navigation a:visited 
+{
+  color: #550000;
+}
+.navigation .title 
+{
+  font-size: 200%;
+}
+    </code>
+
+    <p class="body-text">
+        Basically, it consists of a line that runs through a complicated pattern matcher, and when matched
+        delivers the contents of the {} delimited block that follows the pattern line.  The contents of the 
+        block are one or more semicolon (;) terminated lines. These lines are colon (:) split.  Most seem
+        to set some sort of displayed property.
+    </p>
+    <p class="body-text">
+        I need to take some of these patterns apart to see how they work.
+    </p>
+
+    <p class="body-text">
+        Let's start with the simplest.  '*' asterisk, star, splat.  It matches anything like in sh or bash.
+        if we had the css lines:
+    </p>
+    <code>
+        ...}
+          p
+        { font-size: 26Px}
+        ...
+    </code>
+
+    <p class="body-text">
+        A common container is &ltp&gt - and that won't show up in a text editor. But that's what the p matches.
+        It's like it hollers to all the 'p's out there SET YOUR FONTS TO 26! In this document I'm using the 
+        container &ltp class="body-text"&gt for all normal paragraphs.  I should be able to match those containers
+        with the line p.body-text.  So the code to set the font-size to 26 pixels would be:
+
+    </p>
+    <code>
+        p.body-text {
+            font-size: 26px;
+        }
+    </code>
+
+    <p class="body-text">
+        So I tried it and it worked exactly as advertised.
+    </p>
+
+    <p class="body-text">
+        Now to figure out how to experiment with selectors and stuff...  Perhaps work out a series of
+        tags and selectors, and see if I can get a mental model of how some of this works, and something to
+        test if I'm wrong.  
+    </p>
+
+
+
+    <h2>Using Stylesheet Files</h2>
+
+    <p class="body-text">
+        If you want to use a file as a stylesheet for a document, you must explicitly link as:
+        <code>link rel="stylesheet" href="yourfilename.css"</code>
+  
+        For example, if we were preparing a document named generic-document.html we could
+        cause it to look for a stylesheet, 'styles.css' in the same directory as your document with the
+        line:
+    </p>
+    <code><link rel="stylesheet" href="styles.css" /></code>
+
+    <h3>Stylesheet Naming</h3>
+    <p class="body-text">
+        The name need not be 'styles.css' -- one convention could be 'generic-document.css' to go with 
+        'generic-document.html'.  In this specific case, since this file's name is 'index.html' the 
+        obvious is index.css. In practice I don't know well or ill that would work.  So I'll do both and
+        comment one out. Or, if it looks useful I may have other stylesheets I can try and comment all 
+        but one out.  Whatever looks good when I get there.  
+    </p>
+
+    <p class="body-text">Let's see if the idea of renaming style sheets might work. something like 
+        1-test.css and 7.3-test.css.  Change it in the link line and mark it in the source.</p>
+    <p class="body-text"></p>
+    <p class="body-text"></p>
+
+
+
+
+    
+</body>
+</html>
